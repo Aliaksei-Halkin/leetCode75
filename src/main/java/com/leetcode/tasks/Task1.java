@@ -65,4 +65,19 @@ public class Task1 implements Callable<String> {
         }
         return stringBuilder.toString();
     }
+
+    public String solveTask() {
+        int length1 = word1.length();
+        int length2 = word2.length();
+        StringBuilder stringBuilder = new StringBuilder();
+        for (int i = 0; i < Math.max(length1, length2); i++) {
+            if (i < length1) {
+                stringBuilder.append(word1.charAt(i));
+            }
+            if (i < length2) {
+                stringBuilder.append(word2.charAt(i));
+            }
+        }
+        return stringBuilder.toString();
+    }
 }

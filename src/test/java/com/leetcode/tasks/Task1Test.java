@@ -26,5 +26,16 @@ public class Task1Test {
         Future<String> futureC = executorService.submit(taskC);
         Assertions.assertEquals(futureC.get(), "apbqcd");
     }
+    @Test
+    public void whenSolve_thanPass(){
+        Task1 taskA = new Task1("abc", "pqr");
+        Assertions.assertEquals(taskA.solveTask(), "apbqcr");
+
+        Task1 taskB = new Task1("ab", "pqrs");
+        Assertions.assertEquals(taskB.solveTask(), "apbqrs");
+
+        Task1 taskC = new Task1("abcd", "pq");
+        Assertions.assertEquals(taskC.solveTask(), "apbqcd");
+    }
 
 }
